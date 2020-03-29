@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using JPropertyName = System.Text.Json.Serialization.JsonPropertyNameAttribute;
 
 namespace Fakturoid.Api.Model
 {
@@ -11,51 +11,51 @@ namespace Fakturoid.Api.Model
         /// <summary>
         /// Identifikátor bankovního účtu
         /// </summary>
-        [JsonPropertyName("id")]
+        [JPropertyName("id")]
         public int Id { get; set; }
 
         /// <summary>
         /// Název účtu
         /// </summary>
-        [JsonPropertyName("name")]
+        [JPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Číslo účtu
         /// </summary>
-        [JsonPropertyName("number")]
+        [JPropertyName("number")]
         public string Number { get; set; }
 
         /// <summary>
         /// Měna
         /// </summary>
-        [JsonPropertyName("currency")]
+        [JPropertyName("currency")]
         public string Currency { get; set; }
 
         /// <summary>
         /// IBAN
         /// <para>Optional</para>
         /// </summary>
-        [JsonPropertyName("iban")]
+        [JPropertyName("iban")]
         public string Iban { get; set; }
 
         /// <summary>
         /// BIC (pro SWIFT platby)
         /// <para>Optional</para>
         /// </summary>
-        [JsonPropertyName("swift_bic")]
+        [JPropertyName("swift_bic")]
         public string SwiftBic { get; set; }
 
         /// <summary>
         /// Párovnání plateb
         /// </summary>
-        [JsonPropertyName("pairing")]
+        [JPropertyName("pairing")]
         public bool Pairing { get; set; }
 
         /// <summary>
         /// Haléřové vyrovnání při párování plateb
         /// </summary>
-        [JsonPropertyName("payment_adjustment")]
+        [JPropertyName("payment_adjustment")]
         public string PaymentAdjustment { get; set; }
     }
 }
